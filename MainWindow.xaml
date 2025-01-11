@@ -10,6 +10,9 @@
         Height="450"
         Width="800">
     <Grid>
-
+        <Border Width="200"
+                Height="200"
+                Background="{StaticResource UTOrangeBrush}"
+                CornerRadius="{StaticResource LargeCornerRadius}"/>
     </Grid>
 </Window>
