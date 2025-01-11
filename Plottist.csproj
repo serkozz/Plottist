@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ScottPlot.WPF" Version="5.0.52" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Update="Resources\Styling\Brushes.xaml">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Page>
