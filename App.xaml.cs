@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System.Configuration;
-using System.Data;
+using Plottist.ViewModels;
+using Plottist.Views;
 using System.Windows;
 
 namespace Plottist
@@ -43,7 +43,7 @@ namespace Plottist
 
         private static void RegisterViewModels(IServiceCollection services)
         {
-            // services.AddSingleton<MainViewModel>();
+             services.AddSingleton<MainViewModel>();
         }
 
         private static void RegisterServices(IServiceCollection services)
@@ -53,7 +53,7 @@ namespace Plottist
 
         private static void RegisterViews(IServiceCollection services)
         {
-            // services.AddSingleton<MainWindow>();
+             services.AddSingleton<MainView>();
         }
 
         private static void RegisterOtherComponents(IServiceCollection services)
@@ -70,10 +70,10 @@ namespace Plottist
             base.OnStartup(e);
 
             // Get mainWindow from DI container
-            var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
+            var mainView = ServiceProvider.GetRequiredService<MainView>();
 
             // Show it
-            mainWindow.Show();
+            mainView.Show();
         }
     }
 
