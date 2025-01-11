@@ -9,12 +9,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ScottPlot.WPF" Version="5.0.52" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Update="Resources\Styling\Brushes.xaml">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Page>
     <Page Update="Resources\Styling\Colors.xaml">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
