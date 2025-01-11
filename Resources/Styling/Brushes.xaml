@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <!-- Include Colors-->
+        <ResourceDictionary Source="/Plottist;component/Resources/Styling/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="SkyBlueBrush"
+                     Color="{StaticResource SkyBlue}"/>
+    <SolidColorBrush x:Key="BlueGreenBrush"
+                     Color="{StaticResource BlueGreen}"/>
+    <SolidColorBrush x:Key="PrussianBlueBrush"
+                     Color="{StaticResource PrussianBlue}"/>
+    <SolidColorBrush x:Key="SelectiveYellowBrush"
+                     Color="{StaticResource SelectiveYellow}"/>
+    <SolidColorBrush x:Key="UTOrangeBrush"
+                     Color="{StaticResource UTOrange}"/>
+
+</ResourceDictionary>

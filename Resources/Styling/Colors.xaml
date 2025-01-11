@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--PaletteLink-->
+    <!--https://coolors.co/8ecae6-219ebc-023047-ffb703-fb8500-->
+    <Color x:Key="SkyBlue">#8ECAE6</Color>
+    <Color x:Key="BlueGreen">#219EBC</Color>
+    <Color x:Key="PrussianBlue">#023047</Color>
+    <Color x:Key="SelectiveYellow">#FFB703</Color>
+    <Color x:Key="UTOrange">#FB8500</Color>
+</ResourceDictionary>
