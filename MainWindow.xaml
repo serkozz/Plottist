@@ -6,6 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ScottPlot="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
         xmlns:Converters="clr-namespace:Plottist.Resources.Converters"
+        xmlns:WpfMath="clr-namespace:WpfMath.Controls;assembly=WpfMath"
         xmlns:local="clr-namespace:Plottist"
         mc:Ignorable="d"
         Title="Plottist"
@@ -18,15 +19,17 @@
         <Converters:AdjustOpacityConverter x:Key="AdjustOpacityConverter"/>
     </Window.Resources>
     <Grid>
+
         <ScottPlot:WpfPlot x:Name="plot"
-                           MinWidth="200"/>
+                           MinWidth="200">
+        </ScottPlot:WpfPlot>
         <Grid x:Name="controlsContainerBorder"
                 Width="{Binding ActualWidth, ConverterParameter=0.5, Converter={StaticResource PercentageConverter}, ElementName=window, Mode=OneWay}"
                 MinWidth="200"
-                Height="{Binding Height, ElementName=window, Mode=OneWay}"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Panel.ZIndex="0">
+                Height="434"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Panel.ZIndex="0" Margin="400,0,0,0">
             <Grid.Background>
                 <SolidColorBrush Color="{StaticResource PrussianBlue}" Opacity="0.6"/>
             </Grid.Background>
@@ -41,18 +44,25 @@
             </Grid.ColumnDefinitions>
             <TextBox x:Name="expressionTextBox"
                      Grid.ColumnSpan="2"
-                     Width="auto"
+                     Width="300"
                      Height="30"
-                     Margin="50"
-                     KeyDown="OnKeyDown"
-                     ToolTip="Expression"/>
-            <TextBox x:Name="pointsTextBox"
+                     Margin="50,58,0,89"
+                     ToolTip="Expression" HorizontalAlignment="Left"/>
+            <WpfMath:FormulaControl x:Name="latexPanel"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                VerticalAlignment="Top"
+                                Height="auto"
+                                Margin="50,93,50,0"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"/>
+            <TextBox x:Name="variablesTextBox"
                      Grid.ColumnSpan="2"
                      Grid.Row="1"
                      Width="auto"
                      Height="30"
                      Margin="50"
-                     KeyDown="OnKeyDown"
                      ToolTip="Expression"/>
             <Button x:Name="refreshButton"
                     Grid.Row="2"
@@ -61,7 +71,6 @@
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     Margin="10"
-                    Click="OnButtonClick"
                     MaxHeight="30"/>
             <Button x:Name="buildButton"
                     Grid.Row="2"
@@ -70,8 +79,7 @@
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     Margin="10"
-                    MaxHeight="30"
-                    Click="OnButtonClick"/>
+                    MaxHeight="30"/>
         </Grid>
     </Grid>
 </Window>
